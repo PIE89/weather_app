@@ -36,7 +36,7 @@ async function submitHandler(e) {
 
 // берем данные в формате "город — широта и долгота"
 async function getGeo(name) {
-  const geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${name}&limit=5&appid=${API_KEY}`;
+  const geoUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${name}&limit=5&appid=${API_KEY}`;
   const response = await fetch(geoUrl);
   const data = await response.json();
   return data;
